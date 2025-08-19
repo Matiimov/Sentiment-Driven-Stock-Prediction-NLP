@@ -1,0 +1,10 @@
+jupyter notebook
+pandas
+numpy
+matplotlib
+scikit-learn
+transformers
+torch
+tqdm
+yfinance
+python-dotenv
