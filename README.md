@@ -2,7 +2,7 @@
 
 **University:** UTS - Master of IT (Data Analytics)  
 **Focus:** NLP (FinBERT) + Time-Series Classification  
-**Scope:** Academic exploration — not a trading system or financial advice
+**Scope:** Academic exploration - not a trading system or financial advice
 
 ## Overview
 
@@ -37,20 +37,18 @@ I use **FinBERT** to score news text and train a simple classifier to predict wh
 - Sentiment-only model modestly beats a naive baseline on the held-out period.
 - Gains are sensitive to split and thresholds; without costs, results may be optimistic.
 
+### SVM Predictions (Sentiment-only)
+<img src="docs/svm_predictions.png" width="600"/>
+
+### Mean Reversion + Sentiment Strategy
+<img src="docs/mean_reversion.png" width="600"/>
+
 ## Limitations
 
 - No explicit **transaction costs**, **slippage**, or **position sizing**
 - Simplified validation (single chronological split; no walk-forward)
-- Possible leakage if scaling isn’t fit only on the training window
 - Coverage/alignment noise: not all relevant news is captured
 
-## How to Reproduce
 
-### Environment
+**Project delivered by Mateusz Wichtowski (UTS, Master of IT — Data Analytics)**
 
-```bash
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-# or minimally:
-# pip install transformers torch scikit-learn pandas numpy matplotlib yfinance tqdm python-dotenv
-```
